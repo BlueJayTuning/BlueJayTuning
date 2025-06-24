@@ -1,0 +1,149 @@
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1.3rem; /* or 1.1rem, depending on your preference */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 10px;
+  box-sizing: border-box; 
+  background: #FFFFFF;
+  color: #333;
+}
+
+header {
+  background: #FFFFFF;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header-text {
+  padding-top: 3.5rem;   /* pushes text down */
+  padding-left: 0rem;  /* pushes text right */
+}
+
+.logo {
+  height: 192px; /* Adjust as needed */
+  width: auto;
+}
+
+.subtitle {
+  font-size: 2.1rem;
+  margin-top: 0rem;
+  color: #004466;
+}
+
+main {
+  /* padding: 2rem; */
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.05); */
+}
+
+h1 {
+  color: #000000;
+}
+h2 {
+  color: #004466;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 10;
+}
+
+.brand-list li {
+  background: #eef;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+i.fas, i.fa-solid {
+  margin-right: 0.5em;
+}
+
+.icon-blue {
+  color: #007BFF;
+}
+.icon-red {
+  color: #FF5B00;
+}
+.icon-orange {
+  color: #FFA500;
+}
+.icon-green {
+  color: #00A500;
+}
+.icon-muted {
+  color: #999;
+}
+
+.navbar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.hamburger {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #007BFF;
+}
+
+.nav-menu {
+  display: none;
+  list-style: none;
+  top: 10px;      /* fine-tune vertically */
+  left: 40px;     /* space to the right of hamburger */  
+  margin: 10px 0 0;
+  width: 180px;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  position: absolute;
+}
+
+.nav-menu li {
+  margin: 0.5rem 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-menu a:hover {
+  color: #007BFF;
+}

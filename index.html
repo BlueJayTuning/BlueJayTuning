@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Motor controller tuning for golf carts and utility vehicles">
+    <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header>
+        <a href="/index.html">
+            <div class="header-content">
+                <img src="images/bluej_usb2.jpg" alt="BlueJay" class="logo" />
+                <div class="header-text">
+                    <h1>BlueJay</h1>
+                    <p class="subtitle">DIY Tuning Software</p>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main id="content">
+        <section>
+            <i class="fa-solid fa-gear icon-blue"></i>Easier Motor Controller Tuning for Golf/Utility Carts
+            <ul>
+                <li><strong>Automatic Controller Detection</strong><br>BlueJay queries the connected controller to
+                    detect
+                    the exact brand/model/type</li><br>
+                <li><strong>One Application for Many Carts</strong><br>No guesswork of which Chinese
+                    tuning application to download from sketchy sites</li><br>
+                <li><strong>Save and Restore</strong><br>Snapshot your current configuration or roll back to a
+                    known-good
+                    ones</li><br>
+                <li><strong>English interface</strong><br>Simple and clear parameter descriptions</li><br>
+                <li><strong>Tuning profiles</strong><br>Preconfigured profiles that are ready to load!
+                    <ul>
+                        <li>Sporty and Fast</li>
+                        <li>Casual Around Town</li>
+                        <li>Hill Climber</li>
+                        <li>Many other community supported and shared!</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <i class="fa-solid fa-wrench icon-red"></i>BlueJay works with a wide range of carts with compatible AC motor
+            controllers
+            <p></p>
+            <ul class="brand-list">
+                <li>Evolution / HDK</li>
+                <li>Tao</li>
+                <li>Denago</li>
+                <li>PDG</li>
+                <li>EZKruiser</li>
+                <li>Racka</li>
+                <li>Coleman</li>
+                <li>Gotraxx</li>
+                <li>Gorilla</li>
+                <li>Many others with FJ and EV48-400-C controllers</li>
+            </ul>
+        </section>
+
+        <section>
+            <i class="fa-solid fa-folder-open icon-orange"></i>Software and Profiles
+            <p><a href="downloads.html">Download the licensed application and profiles</a></p>
+        </section>
+
+        <a href="services.html"><h2>Don't Want to DIY Tune?</h2></a>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        async function loadHTML(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadHTML('header', '/includes/header.html');
+        loadHTML('footer', '/includes/footer.html');
+    </script>
+
+    <script src="js/script.js"></script>
+</body>

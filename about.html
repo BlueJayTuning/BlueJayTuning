@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Motor controller tuning for golf carts and utility vehicles">
+    <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header>
+        <a href="/index.html">
+            <div class="header-content">
+                <img src="images/bluej_book.jpg" alt="BlueJay" class="logo" />
+                <div class="header-text">
+                    <h1>BlueJay</h1>
+                    <p class="subtitle"></p>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main id="content">
+
+        <section id="eula">
+            <h2><i class="fa-solid fa-file-contract icon-muted"></i> BlueJay End-User License Agreement (EULA)</h2>
+
+            <p>By installing, using or obtaining a license for this software:</p>
+
+            <p><strong>YOU AGREE</strong> that you have <strong>READ</strong> and <strong>UNDERSTAND</strong> the
+                following statements and terms:</p>
+
+            <ol class="eula-list">
+                <li><strong>Modifying motor controller parameters may void your warranty and can result in equipment
+                        damage, property loss, or serious injury/death to yourself or others.</strong></li>
+                <li>Factory/Dealer settings should only be performed by trained technicians.</li>
+                <li>You are granted a non-exclusive, non-transferable license to use this software, subject to payment
+                    (if required) and acceptance of this agreement.</li>
+                <li>You may <em>not</em> modify, reverse engineer, or redistribute the software.</li>
+                <li><strong>In no event shall BlueJay developers or distributors be liable for any damages arising from
+                        or related to your use of this software.</strong></li>
+                <li>This software collects system identifiers and transmits for the purpose of license generation,
+                    validation and application usage.</li>
+                <li><strong>You are solely responsible for any risks, usage, or consequences resulting from use of this
+                        application.</strong></li>
+            </ol>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        async function loadHTML(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadHTML('header', '/includes/header.html');
+        loadHTML('footer', '/includes/footer.html');
+    </script>
+
+    <script src="js/script.js"></script>
+</body>

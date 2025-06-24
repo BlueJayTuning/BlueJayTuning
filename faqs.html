@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Motor controller tuning for golf carts and utility vehicles">
+    <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header>
+        <a href="/index.html">
+            <div class="header-content">
+                <img src="images/bluej_point_down.jpg" alt="BlueJay" class="logo" />
+                <div class="header-text">
+                    <h1>BlueJay FAQs</h1>
+                    <p class="subtitle"></p>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main id="content">
+        <section id="faq">
+            <h2><i class="fa-solid fa-circle-question icon-blue"></i> Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h3>Can you make my cart go fast?</h3>
+                <ul>
+                    <li>Yes! Your resulting speed will depend on numerous things such as your passenger and cargo
+                        weight, motor rating, tire size, etc. </li>
+                    <li>We can tune you cart for higher end speed, better acceleration,
+                        torque, hill climbing.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>How much $ to tune my cart?</h3>
+                <ul>
+                    <li>Bench tuning is $250
+                        <ul>
+                            <li>We send shipping labels for free shipping</li>
+                            <li>We save all original parameters settings and provide electronic copy for backup</li>
+                            <li>Tune to your requested profile</li>
+                            <li>Put controller back in shipment within 48 hrs</li>
+                            <li>If not happy with tune, send back for free adjustment or return to original
+                                parameters</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>Travel to you tuning varies based on location and task. Contact us for a quote</li></ul>
+            
+            </div>
+
+            <div class="faq-item">
+                <h3>Why isn’t the BlueJay DIY Application Free?</h3>
+                <ul>
+                    <li>OEM programs like GEF12Host or FJ Programming Tool are not actually free — they are licensed
+                        software that have been pirated and redistributed on unofficial sites.</li>
+                    <li>BlueJay is a fully supported multi-controller application offering features OEM tools lack, such
+                        as:
+                        <ul>
+                            <li>Save / Restore</li>
+                            <li>Profiles</li>
+                            <li>User Guide</li>
+                            <li>Clear documentation for all common tuning parameters</li>
+                            <li>Email support, bug fixes, and continuous updates</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I find the latest BlueJay DIY version?</h3>
+                <ul>
+                    <li>The latest version is available <a href="downloads.html">here</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I find a list of reported bugs?</h3>
+                <ul>
+                    <li>Visit:
+                        <a href="https://bluejay/lizard43.com" target="_blank">https://bluejay/lizard43.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h3>Will you give me personal support to DIY tune my controller?</h3>
+                <ul>
+                    <li>No - while we offer application support and bug fixing via email, we cannot provide custom
+                        tuning values for your setup.</li>
+                    <li>Refer to the User Manual for general tuning guidelines.</li>
+                    <li>Ask questions in the community golf/utility cart forums for peer-to-peer tuning help.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        async function loadHTML(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadHTML('header', '/includes/header.html');
+        loadHTML('footer', '/includes/footer.html');
+    </script>
+
+    <script src="js/script.js"></script>
+</body>

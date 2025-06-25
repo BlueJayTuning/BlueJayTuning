@@ -205,6 +205,22 @@ i.fas, i.fa-solid {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
+.cta-banner {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-banner .button-primary {
+  margin-bottom: 15px;
+}
+
+
   /* Responsive styles */
   @media (max-width: 600px) {
     .hero {
@@ -222,5 +238,10 @@ i.fas, i.fa-solid {
     .button-primary {
       font-size: 0.95rem;
       padding: 12px 20px;
+    }
+
+    body {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }

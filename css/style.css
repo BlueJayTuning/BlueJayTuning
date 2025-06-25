@@ -147,3 +147,80 @@ i.fas, i.fa-solid {
 .nav-menu a:hover {
   color: #007BFF;
 }
+
+ .hero {
+    /* padding: 60px 20px; */
+    text-align: center;
+    /* border-bottom: 1px solid #e0e0e0; */
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .subhead {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 30px;
+    /* line-height: 1.6; */
+  }
+
+  .button-primary {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0078d7;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+
+  .button-primary:hover {
+    background-color: #005ea6;
+  }
+
+  .secondary-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .secondary-link a {
+    color: #444;
+    text-decoration: underline;
+  }
+
+  .hero img {
+    max-width: 100%;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .hero {
+      padding: 40px 15px;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+
+    .subhead {
+      font-size: 1.05rem;
+    }
+
+    .button-primary {
+      font-size: 0.95rem;
+      padding: 12px 20px;
+    }
+  }

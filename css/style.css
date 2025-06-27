@@ -1,10 +1,11 @@
 body {
   font-family: system-ui, sans-serif;
-  font-size: 1.3rem; /* or 1.1rem, depending on your preference */
+  font-size: 1.3rem;
+  /* or 1.1rem, depending on your preference */
   line-height: 1.6;
   margin: 0;
   padding: 0 20px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   background: #FFFFFF;
   color: #333;
 }
@@ -30,17 +31,20 @@ header a {
 }
 
 .header-text {
-  padding-top: 3.5rem;   /* pushes text down */
-  padding-left: 0rem;  /* pushes text right */
+  padding-top: 3.5rem;
+  /* pushes text down */
+  padding-left: 0rem;
+  /* pushes text right */
 }
 
 .logo {
-  height: 192px; /* Adjust as needed */
+  height: 80px;
+  /* Adjust as needed */
   width: auto;
 }
 
 .subtitle {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   margin-top: 0rem;
   color: #004466;
 }
@@ -56,6 +60,7 @@ main {
 h1 {
   color: #000000;
 }
+
 h2 {
   color: #004466;
 }
@@ -85,22 +90,27 @@ footer {
   color: #666;
 }
 
-i.fas, i.fa-solid {
+i.fas,
+i.fa-solid {
   margin-right: 0.5em;
 }
 
 .icon-blue {
   color: #007BFF;
 }
+
 .icon-red {
   color: #FF5B00;
 }
+
 .icon-orange {
   color: #FFA500;
 }
+
 .icon-green {
   color: #00A500;
 }
+
 .icon-muted {
   color: #999;
 }
@@ -121,15 +131,17 @@ i.fas, i.fa-solid {
 .nav-menu {
   display: none;
   list-style: none;
-  top: 10px;      /* fine-tune vertically */
-  left: 40px;     /* space to the right of hamburger */  
+  top: 10px;
+  /* fine-tune vertically */
+  left: 40px;
+  /* space to the right of hamburger */
   margin: 10px 0 0;
   width: 180px;
   padding: 0.5rem;
   background: white;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   position: absolute;
 }
 
@@ -146,11 +158,9 @@ i.fas, i.fa-solid {
   color: #007BFF;
 }
 
- .hero {
-    /* padding: 60px 20px; */
-    text-align: center;
-    /* border-bottom: 1px solid #e0e0e0; */
-  }
+.hero {
+  text-align: center;
+}
 
 .header-content {
   display: flex;
@@ -158,57 +168,60 @@ i.fas, i.fa-solid {
   gap: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  min-height: 64px; /* ensures room for header */
+  min-height: 64px;
+  /* ensures room for header */
 }
 
 .header-text {
   padding-top: 0;
 }
 
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #222;
-  }
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: #222;
+}
 
-  .subhead {
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 30px;
-    /* line-height: 1.6; */
-  }
+.subhead {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 30px;
+  /* line-height: 1.6; */
+}
 
-  .button-primary {
-    display: inline-block;
-    padding: 14px 28px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #0078d7;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
+.button-primary {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0078d7;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
 
-  .button-primary:hover {
-    background-color: #005ea6;
-  }
+.button-primary:hover {
+  background-color: #005ea6;
+}
 
-  .secondary-link {
-    margin-top: 20px;
-    font-size: 0.9rem;
-  }
+.secondary-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
 
-  .secondary-link a {
-    color: #444;
-    text-decoration: underline;
-  }
+.secondary-link a {
+  color: #444;
+  text-decoration: underline;
+}
 
-  .hero img {
-    max-width: 100%;
-    margin-top: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+.hero img {
+  max-width: 100%;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
 .cta-banner {
   text-align: center;
@@ -226,14 +239,15 @@ i.fas, i.fa-solid {
 }
 
 
-  /* Responsive styles */
-  @media (max-width: 600px) {
-    .hero {
-      padding: 40px 15px;
-    }
+/* Responsive styles */
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 15px;
+  }
 
- .hero h1 {
-    font-size: 1.75rem; /* fits better on one line */
+  .hero h1 {
+    font-size: 1.75rem;
+    /* fits better on one line */
     line-height: 1.2;
   }
 
@@ -246,15 +260,15 @@ i.fas, i.fa-solid {
     font-size: 1rem;
     line-height: 1.5;
   }
-  
-    .button-primary {
-      font-size: 0.95rem;
-      padding: 12px 20px;
-    }
 
-    body {
-       padding: 0 16px;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+  .button-primary {
+    font-size: 0.95rem;
+    padding: 12px 20px;
   }
+
+  body {
+    padding: 0 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

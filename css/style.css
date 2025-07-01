@@ -95,21 +95,30 @@ i.fa-solid {
   margin-right: 0.5em;
 }
 
+.icon-black {
+  color: #000000;
+}
+
 .icon-blue {
   color: #007BFF;
 }
 
-.icon-red {
-  color: #FF5B00;
+.icon-green {
+  color: #00A500;
 }
 
 .icon-orange {
   color: #FFA500;
 }
 
-.icon-green {
-  color: #00A500;
+.icon-purple {
+  color: #9470D3;
 }
+
+.icon-red {
+  color: #FF5B00;
+}
+
 
 .icon-muted {
   color: #999;

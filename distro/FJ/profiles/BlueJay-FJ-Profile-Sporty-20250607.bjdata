@@ -1,0 +1,51 @@
+[BlueJay]
+Version=BlueJay  :  v20250616
+Contact=bluejaytuning@gmail.com
+
+[Customer]
+Controller ID=202302140001
+Name=Marvin Barry
+
+[FILE]
+ControllerType=FJ
+Name=BlueJay-FJ-Profile-Sporty-20250607.bjdata
+Date=20250607
+Type=Profile
+
+[Tuning]
+P-Forward Maximum Speed=6000
+Partition 1 Speed=800
+Partition 2 Speed=1485
+Partition 3 Speed=2228
+Partition 4 Speed=2971
+Partition 5 Speed=3714
+Partition 6 Speed=4500
+Partition 7 Speed=6000
+S-Forward Maximum Speed=2300
+P-Reverse Maximum Speed=1200
+S-Forward Maximum Speed=2300
+P-Forward Acceleration=600
+P-Reverse Acceleration=300
+P-Acceleration at Partition 1=1350
+P-Acceleration at Partition 2=1300
+P-Acceleration at Partition 3=1300
+P-Acceleration at Partition 4=1250
+P-Acceleration at Partition 5=1250
+P-Acceleration at Partition 6=1300
+P-Acceleration at Partition 7=1300
+Deceleration to 0 RPM=100
+Deceleration Partition 1=300
+Deceleration Partition 2=350
+Deceleration Partition 3=350
+Deceleration Partition 4=500
+Deceleration Partition 5=500
+Deceleration Partition 6=500
+Deceleration Partition 7=300
+Maximum Torque % at 0 RPM=100
+Maximum Torque % at Partition 1=95
+Maximum Torque % at Partition 2=85
+Maximum Torque % at Partition 3=65
+Maximum Torque % at Partition 4=50
+Maximum Torque % at Partition 5=45
+Maximum Torque % at Partition 6=40
+Maximum Torque % at Partition 7=35

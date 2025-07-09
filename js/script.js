@@ -1,5 +1,8 @@
-// Placeholder for future enhancements
-console.log("BlueJay site loaded.");
+const styleVersion = new URLSearchParams(location.search).get("v") || Date.now();
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = '/css/style.css?v=' + styleVersion;
+document.head.appendChild(link);
 
 function toggleMenu() {
   const menu = document.getElementById('navMenu');

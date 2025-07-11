@@ -10,7 +10,7 @@ Contact=bluejaytuning@gmail.com
 
 [FILE]
 ControllerType=FJ
-Name=BlueJay-FJ-Profile-Sporty-20250607.bjdata
+Name=BlueJay-FJ-Profile-Hill-Climber-20250607.bjdata
 Date=20250607
 Type=Profile
 
@@ -27,14 +27,14 @@ H Gear - Reverse Maximum Speed=1200
 L Gear - Forward Maximum Speed=2300
 L Gear - Reverse Maximum Speed=1200
 Minimum Motor Speed=100
-H Gear - Forward Maximum Acceleration=700
-H Gear - Acceleration at Partition 1=1500
-H Gear - Acceleration at Partition 2=1450
-H Gear - Acceleration at Partition 3=1400
-H Gear - Acceleration at Partition 4=1350
-H Gear - Acceleration at Partition 5=1350
-H Gear - Acceleration at Partition 6=1300
-H Gear - Acceleration at Partition 7=1250
+H Gear - Forward Maximum Acceleration=1600
+H Gear - Acceleration at Partition 1=1550
+H Gear - Acceleration at Partition 2=1500
+H Gear - Acceleration at Partition 3=1500
+H Gear - Acceleration at Partition 4=1450
+H Gear - Acceleration at Partition 5=1450
+H Gear - Acceleration at Partition 6=1400
+H Gear - Acceleration at Partition 7=1350
 H Gear - Deceleration to 0 RPM=100
 H Gear - Deceleration Partition 1=300
 H Gear - Deceleration Partition 2=350
@@ -46,23 +46,23 @@ H Gear - Deceleration Partition 7=300
 H Gear - Reverse Maximum Acceleration=300
 Maximum Torque % at 0 RPM=100
 Maximum Torque % at Partition 1=100
-Maximum Torque % at Partition 2=95
-Maximum Torque % at Partition 3=80
-Maximum Torque % at Partition 4=65
-Maximum Torque % at Partition 5=60
-Maximum Torque % at Partition 6=40
-Maximum Torque % at Partition 7=50
+Maximum Torque % at Partition 2=100
+Maximum Torque % at Partition 3=95
+Maximum Torque % at Partition 4=90
+Maximum Torque % at Partition 5=85
+Maximum Torque % at Partition 6=80
+Maximum Torque % at Partition 7=75
 Slope Control Mode=Stop On Slope
 Maximum Motor Speed of Slope Mode=400
 Speed Loop Ki in UnSlope Mode=250
 
 [Sink]
-L Gear - Acceleration at Partition 1=400
-L Gear - Acceleration at Partition 2=600
-L Gear - Acceleration at Partition 3=700
-L Gear - Acceleration at Partition 4=700
-L Gear - Acceleration at Partition 5=700
-L Gear - Acceleration at Partition 6=600
+L Gear - Acceleration at Partition 1=500
+L Gear - Acceleration at Partition 2=700
+L Gear - Acceleration at Partition 3=800
+L Gear - Acceleration at Partition 4=800
+L Gear - Acceleration at Partition 5=800
+L Gear - Acceleration at Partition 6=700
 L Gear - Acceleration at Partition 7=600
 Electromagnetic Brake Release Delay Time=500
 

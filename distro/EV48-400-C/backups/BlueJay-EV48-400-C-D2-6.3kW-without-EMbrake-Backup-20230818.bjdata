@@ -1,0 +1,143 @@
+; !! WARNING !!
+; DO NOT EDIT
+; Changes will prevent loading.
+
+[BlueJay]
+Version=BlueJay  :  v20250622
+Contact=bluejaytuning@gmail.com
+
+[Customer]
+Controller ID=202302140001
+Name=marvin barry
+
+[FILE]
+ControllerType=EV48-400-C
+Name=BlueJay-EV48-400-C-D2-6.3kW-without-EMbrake-Backup-20230818.bjdata
+Date=20250625
+Type=Backup
+
+[Controller]
+Vehicle Model=Other
+Hardware Version=3
+Vehicle Speed=0
+Actual Motor RPM=0
+Target Motor RPM=0
+Motor Temperature=200
+Controller Temperature=32
+KSI Voltage=49.80
+DC Bus Voltage=50.20
+5V Supply Voltage=4.80
+Battery String Voltage=100
+Main Relay Voltage=49.60
+Brake Relay Voltage=49.70
+Main Relay Pull-in State=1
+Brake Relay Pull-in State=0
+Accelerator Switch=0
+Accelerator Voltage=0
+Forward Switch=0
+Backward Switch=0
+Slow Mode Switch=0
+Reserve Switch=0
+Phase Current=0.60
+Encoder Phase A Speed=0
+Encoder Phase B Speed=0
+Total Vehicle Running Time=31
+Odometer=778
+
+[Firmware]
+Release Date=2023/08/18
+
+Version=v9
+
+Type=Non-electric brake 6.3kW
+
+
+[Faults]
+EMBrakeOpen UKSISupplyOutOfRange MainContactorDidNotClose 
+
+[Motor Parameters]
+Motor Maximum Speed=6000
+Driving Torque Factor 0->500 RPM=92
+Driving Torque Factor 500->1000 RPM=92
+Driving Torque Factor 1000->1500 RPM=88
+Driving Torque Factor 1500->2000 RPM=75
+Driving Torque Factor 2000->2500 RPM=58
+Driving Torque Factor 2500->3000 RPM=54
+Driving Torque Factor 3000->MAX RPM=52
+Regenerative Torque Factor 1000->0 RPM=95
+Regenerative Torque Factor 2000->1000 RPM=48
+Regenerative Torque Factor 3000->2000 RPM=36
+Regenerative Torque Factor 4000->3000 RPM=33
+Regenerative Torque Factor 5000->4000 RPM=30
+Regenerative Torque Factor MAX->5000 RPM=20
+Motor Peak Power=12000
+Motor Peak Torque=60
+Motor Direction=Anti-Clockwise
+Encoder Lines=64
+Encoder AB Dir=A_Ahead_of_B
+data=FCDA9FDEB78F68C1B09BD53904B8BF4F8A0A75DBD07060514BC69EC3C5B13EE88BA888DDAA782C86C277089530090891062362A41A45589CAAA5280964F5B6CF
+
+[Standard Gear Mode]
+Forward High Gear Max Speed=5300
+Forward Slow Gear Max Speed=2650
+Reverse Max Speed=1500
+Speed Loop Ki=0.025
+Speed Loop Kp=3.50
+CAN Baudrate=500KBit/s
+data=00F63FD25ED31802F18C8C96A1EE76E744A7AA373B354214F9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305ABD336A318FC2BAD69AAA5280964F5B6CF
+
+[Accelerator]
+Forward Acceleration 0->500 RPM=25
+Forward Acceleration 500->1000 RPM=18
+Forward Acceleration 1000->2000 RPM=15
+Forward Acceleration 2000->3000 RPM=15
+Forward Acceleration 3000->4000 RPM=12
+Forward Acceleration 4000->5000 RPM=10
+Forward Acceleration 5000->MAX RPM=8
+Forward Deceleration 500->0 RPM=3
+Forward Deceleration 1000->500 RPM=3
+Forward Deceleration 2000->1000 RPM=3
+Forward Deceleration 3000->2000 RPM=4
+Forward Deceleration 4000->3000 RPM=4
+Forward Deceleration 5000->4000 RPM=4
+Forward Deceleration MAX->5000 RPM=4
+Reverse Acceleration=10
+Reverse Deceleration=3
+Accelerator Pedal Signal Type=Analog+Switch
+Accelerator Min Value=0.5
+Accelerator Max Value=4.2
+data=C5F873092B1EF079610680717DAF1DE4E281DE386A80251E848C9CAC6B48502CD6B38AD8528136DEA1D4EC7B6C83B95ADD4DAE4A94A088BBAAA5280964F5B6CF
+
+[Low Side Driver]
+Main Relay Enable=ENABLE
+Electric Brake Enable=DISABLE
+Speed Frequency Enable=ENABLE
+Main Relay Pull-in Voltage=47
+Main Relay Pull-in Time=5
+Main Relay Keep Voltage=42
+Electric Brake Pull-in Voltage=47
+Electric Brake Pull-in Time=5
+Electric Brake Keep Voltage=42
+data=527C12F6E00932CF5C24DBF6AC74E8E69DEC0B87C34196B8F9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305AB921B8715E030511DAAA5280964F5B6CF
+
+[Slope Control]
+Hill Hold Mode=Running down on the slope
+Slide Max Motor Speed=200
+Slide Kp on the Slope=4
+Slide Ki on the Slope=0.03
+data=C8E40A89A61C6FDA83F2BB9972CD61BAF9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305AB0F196409045A02BBAAA5280964F5B6CF
+
+[Temperature Regulation]
+Motor Temperature Sensor Type=KTY84
+Motor Over Temperature Cutback Power=135
+Motor Over Temperature Zero Power=145
+Controller Over Temperature Cutback Power=79
+Controller Over Temperature Zero Power=90
+Controller Under Temperature Cutback Power=-22
+Controller Under Temperature Zero Power=-29
+data=DF9D34E6ADDC9096E4DD2C8C353256D7D9FE5D835D204D6BF9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305ABB89AC8BFC19B5639AAA5280964F5B6CF
+
+[Mileage]
+Reduction Ratio=12.3
+Tire Diameter=500
+data=5889AD817205C033944CA1BDD99C4CBCF9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305ABF9DD253CB8B305ABDE664746011AA3FBAAA5280964F5B6CF

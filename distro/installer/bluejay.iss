@@ -3,7 +3,7 @@
 
 #define MyAppName "BlueJay"
 #define MyAppPublisher "BlueJay Tuning LLC"
-#define MyAppURL "https://bluejaytuning.lizard43.com/"
+#define MyAppURL "https://bluejaytuning.com/"
 #define MyAppExeName "BlueJay.exe"
 #define MyAppVersion GetFileVersion("D:\share\bluejay\x64\Release\" + MyAppExeName)
 

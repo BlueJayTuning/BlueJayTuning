@@ -36,5 +36,5 @@ Suggested tuning profiles are available in the top-level `profiles/` folder. The
 
 Questions? Feedback?
 
-📧 **BlueJayTuning@gmail.com**
+📧 **support@bluejaytuning.com**
 

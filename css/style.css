@@ -204,18 +204,21 @@ i.fa-solid {
 }
 
 .button-primary {
-  display: inline-block;
-  padding: 14px 28px;
+  background-color: #0052cc;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  color: #fff;
-  background-color: #0078d7;
+  font-weight: bold;
+  border: none;
   border-radius: 6px;
+  cursor: pointer;
   text-decoration: none;
+  display: inline-block;
   transition: background-color 0.2s ease;
 }
 
 .button-primary:hover {
-  background-color: #005ea6;
+  background-color: #003fa3;
 }
 
 .secondary-link {
@@ -228,12 +231,16 @@ i.fa-solid {
   text-decoration: underline;
 }
 
-.hero img {
-  max-width: 100%;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.img-ui-preview {
+  display: block;
+  margin: 2rem auto;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 
 .cta-banner {
   text-align: center;

@@ -1,6 +1,6 @@
 # Simple Performance Tuning for Golf & Utility Carts
 
-BlueJay automatically detects your controller, saves and restores settings, loads profiles and makes motor tuning simple - even for beginners!
+BlueJay auto detects your controller type; Saves and restores settings; Loads/Create/Share tuning profiles.
 
 👉 Visit [**bluejaytuning.com**](https://bluejaytuning.com)
 
@@ -28,13 +28,16 @@ BlueJay works with a wide range of vehicles using compatible AC motor controller
 - EZKruiser
 - Gotraxx
 - Gorilla
-- Moto Electric
 - Icon
+- Moto Electric
+- NXT
 - PDG
+- Pure EV
 - Racka
 - Spartan
 - Tao
-- ... and others with FJ and 400-C controllers
+- Whisper
+- Many others with FJ, EV48-400-C and Tercel/LVTong controllers
 
 
 ## 📬 Questions? Feedback?

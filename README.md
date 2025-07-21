@@ -34,10 +34,12 @@ BlueJay works with a wide range of vehicles using compatible AC motor controller
 - PDG
 - Pure EV
 - Racka
+- Royal
 - Spartan
+- Star
 - Tao
 - Whisper
-- Many others with FJ, EV48-400-C and Tercel/LVTong controllers
+- Many others with FJ, EV48-400-C and Tercel/LVTong/JHL controllers
 
 
 ## 📬 Questions? Feedback?

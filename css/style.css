@@ -233,14 +233,13 @@ i.fa-solid {
 
 .img-ui-preview {
   display: block;
-  margin: 2rem auto;
+  margin: 1.2rem auto 0.3rem auto; /* top right bottom left */
   max-width: 600px;
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
 
 .cta-banner {
   text-align: center;
@@ -257,6 +256,16 @@ i.fa-solid {
   margin-bottom: 15px;
 }
 
+figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+figure figcaption {
+  margin-top: 0.2rem; /* reduced from 0.5rem */
+  font-size: 0.9rem;
+  color: #555;
+}
 
 /* Responsive styles */
 @media (max-width: 600px) {

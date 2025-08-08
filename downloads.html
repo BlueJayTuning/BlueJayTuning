@@ -45,42 +45,56 @@
             <h2><i class="fa-solid fa-download icon-blue"></i> Documentation</h2>
             <ul class="download-list">
                 <li>
-                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-Quick-Start.pdf" download>
-                        <i class="fa-solid fa-file"></i> Quickstart Guide (PDF) - v20150721
+                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-Quick-Start.pdf"
+                        download>
+                        <i class="fa-solid fa-file"></i> Quickstart Guide (PDF) - v20150808
                     </a>
                 </li>
                 <li>
-                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-FJ-User-Guide.pdf" download>
-                        <i class="fa-solid fa-file"></i> BlueJay FJ User Guide with Tuning Parameters defined (PDF) - v20150808
+                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-FJ-User-Guide.pdf"
+                        download>
+                        <i class="fa-solid fa-file"></i> BlueJay FJ User Guide with (PDF) -
+                        v20150808
                     </a>
                 </li>
                 <li>
-                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-400-C-User-Guide.pdf" download>
-                        <i class="fa-solid fa-file"></i> BlueJay 400-C User Guide with Tuning Parameters defined (PDF) - v20150808
+                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-400-C-User-Guide.pdf"
+                        download>
+                        <i class="fa-solid fa-file"></i> BlueJay 400-C User Guide (PDF) -
+                        v20150808
                     </a>
                 </li>
                 <li>
-                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-Tercel-User-Guide.pdf" download>
-                        <i class="fa-solid fa-file"></i> BlueJay Tercel User Guide with Tuning Parameters defined (PDF) - v20150808
+                    <a href="https://raw.githubusercontent.com/BlueJayTuning/BlueJayTuning/main/docs/BlueJay-Tercel-User-Guide.pdf"
+                        download>
+                        <i class="fa-solid fa-file"></i> BlueJay Tercel User Guide (PDF)
+                        - v20150808
                     </a>
                 </li>
             </ul>
 
         </section>
 
-        <section id="issues">
+        <section>
             <h2><i class="fa-solid fa-bug icon-red"></i> Known Issues and Bugs</h2>
             <ul>
                 <li>
-                    Do you have an issue that's not listed below? Send us an email with description and screenshots and we'll investigate and make an update ASAP
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    Tercel support is incomplete. Some regen parameters may not work as expected.
+                    Do you have an issue that's not listed below? Send us an email with description and screenshots and
+                    we'll investigate and make an update ASAP
                 </li>
             </ul>
 
+            <div class="issues-widget">
+                <div class="toolbar">
+                    <input id="search" type="search" placeholder="Filter by title..." />
+                    <select id="labelFilter">
+                        <option value="">All labels</option>
+                    </select>
+                    <span class="counter" id="counter">Loading…</span>
+                </div>
+
+                <div id="issues"></div>
+            </div>
         </section>
 
     </main>
@@ -96,7 +110,10 @@
 
         loadHTML('header', '/includes/header.html');
         loadHTML('footer', '/includes/footer.html');
+
     </script>
 
     <script src="js/script.js"></script>
+    <script src="js/issues.js"></script>
 </body>
+</html>

@@ -1,8 +1,10 @@
-const styleVersion = new URLSearchParams(location.search).get("v") || Date.now();
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = '/css/style.css?v=' + styleVersion;
-document.head.appendChild(link);
+const v = new URLSearchParams(location.search).get("v") || Date.now();
+for (const href of ["/css/style.css", "/css/issues.css"]) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = `${href}?v=${v}`;
+  document.head.appendChild(link);
+}
 
 function toggleMenu() {
   const menu = document.getElementById('navMenu');

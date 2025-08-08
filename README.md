@@ -1,4 +1,4 @@
-# Simple Performance Tuning for Golf & Utility Carts
+# DIY Performance Tuning for Golf & Utility Carts
 
 BlueJay auto detects your controller type; Saves and restores settings; Loads/Create/Share tuning profiles.
 

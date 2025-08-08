@@ -58,7 +58,9 @@ Source: "D:\share\BlueJayTuning\distro\FJ\*"; DestDir: "{#MyAppDataPath}\FJ"; Fl
 Source: "D:\share\BlueJayTuning\distro\EV48-400-C\*"; DestDir: "{#MyAppDataPath}\EV48-400-C"; Flags: ignoreversion recursesubdirs createallsubdirs uninsneveruninstall
 
 Source: "D:\share\BlueJayTuning\docs\BlueJay-Quick-Start.pdf"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\share\BlueJayTuning\docs\BlueJay-User-Guide.pdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\share\BlueJayTuning\docs\BlueJay-FJ-User-Guide.pdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\share\BlueJayTuning\docs\BlueJay-400-C-User-Guide.pdf"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\share\BlueJayTuning\docs\BlueJay-Tercel-User-Guide.pdf"; DestDir: "{app}"; Flags: ignoreversion
 
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

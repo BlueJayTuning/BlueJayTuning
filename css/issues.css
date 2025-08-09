@@ -107,6 +107,24 @@
 }
 
 @media (max-width: 600px) {
+  .issues-widget .toolbar input[type="search"] {
+    /* make search span the full first row */
+    flex: 1 1 100%;
+  }
+
+  .issues-widget .toolbar select {
+    /* put selects on the second row, side by side when possible */
+    flex: 1 1 calc(50% - .375rem);
+  }
+
+  .issues-widget .toolbar .counter {
+    /* keep the count pushed to the right on the second row */
+    margin-left: auto;
+    padding: .5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
   .issues-widget .meta {
     width: 100%;
     margin-left: 0;

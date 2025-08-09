@@ -19,6 +19,7 @@
   gap: .75rem;
   align-items: center;
   margin-bottom: 1rem;
+   flex-wrap: wrap;
 }
 
 .issues-widget .toolbar select,
@@ -108,18 +109,17 @@
 
 @media (max-width: 600px) {
   .issues-widget .toolbar input[type="search"] {
-    /* make search span the full first row */
-    flex: 1 1 100%;
+    flex: 1 0 100%;             /* full first row */
+    min-width: 0;
   }
 
   .issues-widget .toolbar select {
-    /* put selects on the second row, side by side when possible */
-    flex: 1 1 calc(50% - .375rem);
+    flex: 1 0 45%;              /* two selects share row */
   }
 
   .issues-widget .toolbar .counter {
-    /* keep the count pushed to the right on the second row */
-    margin-left: auto;
+    flex: 0 0 auto;             /* keep natural width */
+    margin-left: auto;          /* push to right on second row */
     padding: .5rem 0;
   }
 }

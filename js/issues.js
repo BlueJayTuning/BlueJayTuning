@@ -120,6 +120,12 @@ function applyFilters() {
             opt.textContent = name;
             labelEl.appendChild(opt);
         }
+
+        // set default label to "bug" if available
+        if ([...labelEl.options].some(opt => opt.value === "bug")) {
+            labelEl.value = "bug";
+        }
+
         applyFilters();
     } catch (e) {
         counterEl.textContent = "Failed to load issues";

@@ -9,6 +9,8 @@
     <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- NEW: issues.css -->
+    <link rel="stylesheet" href="css/issues.css">
 </head>
 
 <body>
@@ -87,6 +89,14 @@
             <div class="issues-widget">
                 <div class="toolbar">
                     <input id="search" type="search" placeholder="Filter by title..." />
+
+                    <!-- NEW: state filter -->
+                    <select id="stateFilter">
+                        <option value="open">Open</option>
+                        <option value="closed">Closed</option>
+                        <option value="all">All</option>
+                    </select>
+
                     <select id="labelFilter">
                         <option value="">All labels</option>
                     </select>

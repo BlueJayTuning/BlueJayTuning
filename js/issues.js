@@ -9,9 +9,8 @@ const stateEl = document.getElementById("stateFilter");
 
 // Basic cache & state
 let allIssues = [];
+const commentsCache = new Map(); // issueNumber -> comments[]
 
-// Fetch issues (skip PRs) — unauthenticated limit is 60 req/hr
-// pull all states once, we’ll filter client-side
 async function fetchIssues(page = 1, acc = []) {
     const url = `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=100&page=${page}`;
     const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" } });
@@ -19,8 +18,22 @@ async function fetchIssues(page = 1, acc = []) {
     const chunk = await res.json();
     const onlyIssues = chunk.filter(item => !item.pull_request);
     acc.push(...onlyIssues);
-    // naive pagination: keep going while we still get 100 back
     if (chunk.length === 100) return fetchIssues(page + 1, acc);
+    return acc;
+}
+
+// NEW: fetch comments for one issue (cached), with pagination
+async function fetchIssueComments(issueNumber, page = 1, acc = []) {
+    if (commentsCache.has(issueNumber)) return commentsCache.get(issueNumber);
+
+    const url = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments?per_page=100&page=${page}`;
+    const res = await fetch(url, { headers: { "Accept": "application/vnd.github+json" } });
+    if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
+    const chunk = await res.json();
+    acc.push(...chunk);
+    if (chunk.length === 100) return fetchIssueComments(issueNumber, page + 1, acc);
+
+    commentsCache.set(issueNumber, acc);
     return acc;
 }
 
@@ -48,15 +61,16 @@ function uniqueLabels(issues) {
     return Array.from(set).sort((a, b) => a.localeCompare(b));
 }
 
+// Minimal, safe renderer with <img> support
 function renderMarkdownMinimal(md) {
     if (!md) return "";
     let s = md;
 
-    // 0) Allow/sanitize raw HTML <img ...> that GitHub puts in issue bodies
+    // Allow/sanitize raw <img> tags from GitHub HTML
     const placeholders = [];
     s = s.replace(/<img\s+[^>]*>/gi, (tag) => {
         const srcMatch = tag.match(/src\s*=\s*["'](https?:\/\/[^"']+)["']/i);
-        if (!srcMatch) return ""; // drop unsafe/unknown
+        if (!srcMatch) return "";
         const altMatch = tag.match(/alt\s*=\s*["']([^"']*)["']/i);
         const alt = altMatch ? altMatch[1] : "";
         const safe = `<img src="${srcMatch[1]}" alt="${alt}" loading="lazy">`;
@@ -64,32 +78,55 @@ function renderMarkdownMinimal(md) {
         return `__HTML_PLACEHOLDER_${placeholders.length - 1}__`;
     });
 
-    // 1) escape the rest
+    // Escape everything else
     s = s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 
-    // 2) images: ![alt](url)
+    // Markdown images
     s = s.replace(/!\[([^\]]*)\]\((https?:\/\/[^\s)]+)\)/g,
         (_m, alt, url) => `<img src="${url}" alt="${alt || ""}" loading="lazy">`);
 
-    // 3) links: [text](url)
+    // Markdown links
     s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
         (_m, text, url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`);
 
-    // 4) bare image URLs (with common extensions)
+    // Bare image URLs
     s = s.replace(/\b(https?:\/\/[^\s]+?\.(?:png|jpe?g|gif|webp))\b/gi,
         (_m, url) => `<img src="${url}" alt="" loading="lazy">`);
 
-    // 5) other bare URLs → links
+    // Bare URLs → links
     s = s.replace(/\b(https?:\/\/[^\s<]+)\b/g,
         (_m, url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
 
-    // 6) line breaks
+    // Newlines
     s = s.replace(/\n/g, "<br>");
 
-    // 7) restore sanitized <img> tags
+    // Restore sanitized imgs
     s = s.replace(/__HTML_PLACEHOLDER_(\d+)__/g, (_m, i) => placeholders[Number(i)] || "");
-
     return s;
+}
+
+// NEW: render comments list HTML
+function renderCommentsHTML(comments) {
+    if (!comments || comments.length === 0) {
+        return `<div class="no-comments">No comments yet.</div>`;
+    }
+    return comments.map(c => {
+        const author = c.user?.login ?? "someone";
+        const avatar = c.user?.avatar_url ?? "";
+        const when = relDate(c.created_at);
+        const body = renderMarkdownMinimal(c.body || "");
+        return `
+          <div class="comment">
+            <div class="comment-meta">
+              ${avatar ? `<img class="avatar" src="${avatar}" alt="${author}">` : ""}
+              <span class="author">${author}</span>
+              <span class="dot">•</span>
+              <span class="time">${when}</span>
+            </div>
+            <div class="comment-body">${body}</div>
+          </div>
+        `;
+    }).join("");
 }
 
 function render(issues) {
@@ -106,10 +143,8 @@ function render(issues) {
 
     for (const issue of issues) {
         const details = document.createElement("details");
-
         const summary = document.createElement("summary");
 
-    
         const stateChip = document.createElement("span");
         stateChip.className = `state ${issue.state}`;
         stateChip.textContent = issue.state;
@@ -135,7 +170,6 @@ function render(issues) {
         meta.className = "meta";
         meta.textContent = `opened ${relDate(issue.created_at)} by ${issue.user?.login ?? "someone"}`;
 
-        // Order: state pill, number, title, labels, meta
         summary.appendChild(stateChip);
         summary.appendChild(numSpan);
         summary.appendChild(titleSpan);
@@ -146,9 +180,31 @@ function render(issues) {
         body.className = "body";
         body.innerHTML = renderMarkdownMinimal(issue.body || "(no description)");
 
+        // NEW: comments container (lazy)
+        const commentsWrap = document.createElement("div");
+        commentsWrap.className = "comments";
+        commentsWrap.innerHTML = "";               // empty until opened
+        commentsWrap.dataset.loaded = "0";         // flag
+
         details.appendChild(summary);
         details.appendChild(body);
+        details.appendChild(commentsWrap);
         issuesEl.appendChild(details);
+
+        // Lazy-load comments on first open
+        details.addEventListener("toggle", async () => {
+            if (!details.open) return;
+            if (commentsWrap.dataset.loaded === "1") return;
+            commentsWrap.dataset.loaded = "1";
+            commentsWrap.innerHTML = `<div class="comments-loading">Loading comments…</div>`;
+            try {
+                const comments = await fetchIssueComments(issue.number);
+                commentsWrap.innerHTML = renderCommentsHTML(comments);
+            } catch (err) {
+                commentsWrap.innerHTML = `<div class="comments-error">Failed to load comments.</div>`;
+                console.error(err);
+            }
+        }, { once: false });
     }
 }
 

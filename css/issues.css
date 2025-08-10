@@ -168,3 +168,51 @@
   text-decoration: underline;
   word-break: break-word;
 }
+
+/* Comments block */
+.issues-widget .comments {
+  margin: .75rem 0 0;
+  padding-left: .75rem;
+  border-left: 3px solid var(--border);
+}
+
+.issues-widget .comments-loading,
+.issues-widget .comments-error,
+.issues-widget .no-comments {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: .5rem 0;
+}
+
+.issues-widget .comment {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+  margin: .5rem 0;
+}
+
+.issues-widget .comment-meta {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: .35rem;
+}
+
+.issues-widget .comment-meta .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.issues-widget .comment-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: .4rem;
+  border-radius: .35rem;
+  border: 1px solid var(--border);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="js/cache.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" Motor controller tuning for golf carts and utility vehicles">
+    <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <header>
+        <a href="/index.html">
+            <div class="header-content">
+                <img src="images/bluej_point_down.jpg" alt="BlueJay" class="logo" />
+                <div class="header-text">
+                    <h1>BlueJay</h1>
+                    <p class="subtitle"><i class="fa-solid fa-file-contract icon-muted"></i>BlueJay - Privacy Policy</p>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <main id="content">
+
+        <section id="privacy">
+            <p><strong>Effective date: </strong>2025-01-01</p>
+            <p><strong>Contact: </strong><a href="mailto:support@bluejaytuning.com">support@bluejaytuning.com</a></p>
+
+            <p><strong>What we collect.</strong>When you install or use BlueJay, we may collect: license key,
+                device/app identifiers (e.g., hardware hash, OS and app version), IP address, and information you choose
+                to provide to support.
+
+            <p><strong>Why we collect it.</strong>We use this information to:
+            <ul class="privacy-list">
+                <li>activate and verify your license;</li>
+                <li>prevent fraud and abuse;</li>
+                <li>provide customer support and product updates.</li>
+            </ul>
+            </p>
+
+            <p><strong>Sharing.</strong> We don’t sell personal data. We share it only with service providers we use to
+                host, store, or process licensing data, under contract, and when required by law.</p>
+
+            <p><strong>Retention.</strong> We keep license records for as long as your license is active and for 5 years afterward for audit and compliance, then delete or anonymize them.</p>
+
+            <p><strong>Your choices & rights.</strong> You can contact us at support@bluejaytuning.com to access,
+                correct, or request deletion of your data. Depending on your location, you may have additional rights
+                (e.g., under GDPR/CCPA).</p>
+
+            <p><strong>Security.</strong> We use reasonable administrative, technical, and physical safeguards to
+                protect your information (e.g., TLS in transit). No method is 100% secure.</p>
+
+            <p><strong>Children.</strong> Our app is not directed to children under 13 (or the minimum age in your
+                region), and we don’t knowingly collect data from them.</p>
+
+            <p><strong>Changes.</strong> We may update this policy. We’ll post the new date above and, if changes are
+                material, provide additional notice.</p>
+
+
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        async function loadHTML(id, file) {
+            const res = await fetch(file);
+            const html = await res.text();
+            document.getElementById(id).innerHTML = html;
+        }
+
+        loadHTML('header', '/includes/header.html');
+        loadHTML('footer', '/includes/footer.html');
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

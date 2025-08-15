@@ -15,13 +15,13 @@ Type=Profile
 ;0-8000
 Motor Maximum Speed=6200
 
-;0-6000
+;0-8000
 Forward High Gear Max Speed=6000
 
-;0-6000
+;0-8000
 Forward Slow Gear Max Speed=2500
 
-;0-6000
+;0-8000
 Reverse Max Speed=1300
 
 ;0-100

@@ -111,9 +111,6 @@ Regenerative Torque Factor 2000->1000 RPM=36
 ;0-100
 Regenerative Torque Factor 1000->0 RPM=75
 
-;0-14000
-Motor Maximum Power=11000
-
 ;0.0-10.0
 Speed Loop Kp=2.75
 

@@ -33,7 +33,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
-OutputDir=D:\share\BlueJayTuning\distro
+OutputDir=D:\share\BlueJay\distro
 OutputBaseFilename=bluejay-{#MyAppVersion}-setup
 SetupIconFile=D:\share\BlueJayTuning\distro\installer\bluej.ico
 SolidCompression=yes

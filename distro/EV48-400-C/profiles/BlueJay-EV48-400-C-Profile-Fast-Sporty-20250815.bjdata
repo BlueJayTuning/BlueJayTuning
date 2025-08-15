@@ -1,0 +1,115 @@
+[BlueJay]
+Version=BlueJay  :  v20250815
+Contact=support@bluejaytuning.com
+
+[FILE]
+ControllerType=EV48-400-C
+Name=BlueJay-EV48-400-C-Profile-Fast-Sporty-20250815.bjdata
+Type=Profile
+
+[Tuning]
+;0-8000
+Motor Maximum Speed=6500
+
+;0-8000
+Forward High Gear Max Speed=6000
+
+;0-8000
+Forward Slow Gear Max Speed=3000
+
+;0-8000
+Reverse Max Speed=1500
+
+;0-100
+Forward Acceleration 0->500 RPM=35
+
+;0-100
+Forward Acceleration 500->1000 RPM=28
+
+;0-100
+Forward Acceleration 1000->2000 RPM=24
+
+;0-100
+Forward Acceleration 2000->3000 RPM=22
+
+;0-100
+Forward Acceleration 3000->4000 RPM=18
+
+;0-100
+Forward Acceleration 4000->5000 RPM=14
+
+;0-100
+Forward Acceleration 5000->MAX RPM=12
+
+;0-100
+Reverse Acceleration=10
+
+;0-100
+Driving Torque Factor 0->500 RPM=100
+
+;0-100
+Driving Torque Factor 500->1000 RPM=100
+
+;0-100
+Driving Torque Factor 1000->1500 RPM=95
+
+;0-100
+Driving Torque Factor 1500->2000 RPM=95
+
+;0-100
+Driving Torque Factor 2000->2500 RPM=80
+
+;0-100
+Driving Torque Factor 2500->3000 RPM=70
+
+;0-100
+Driving Torque Factor 3000->MAX RPM=65
+
+;0-100
+Forward Deceleration MAX->5000 RPM=6
+
+;0-100
+Forward Deceleration 5000->4000 RPM=6
+
+;0-100
+Forward Deceleration 4000->3000 RPM=6
+
+;0-100
+Forward Deceleration 3000->2000 RPM=6
+
+;0-100
+Forward Deceleration 2000->1000 RPM=4
+
+;0-100
+Forward Deceleration 1000->500 RPM=3
+
+;0-100
+Forward Deceleration 500->0 RPM=3
+
+;0-100
+Reverse Deceleration=3
+
+;0-100
+Regenerative Torque Factor MAX->5000 RPM=30
+
+;0-100
+Regenerative Torque Factor 5000->4000 RPM=40
+
+;0-100
+Regenerative Torque Factor 4000->3000 RPM=45
+
+;0-100
+Regenerative Torque Factor 3000->2000 RPM=50
+
+;0-100
+Regenerative Torque Factor 2000->1000 RPM=65
+
+;0-100
+Regenerative Torque Factor 1000->0 RPM=75
+
+;0.0-10.0
+Speed Loop Kp=3.3
+
+;0.0-1.0
+Speed Loop Ki=0.022
+

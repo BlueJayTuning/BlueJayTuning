@@ -1,0 +1,179 @@
+[BlueJay]
+Version=BlueJay  :  v20250817
+Contact=support@bluejaytuning.com
+
+[Customer]
+Name=
+
+[FILE]
+ControllerType=FJ
+Name=C:\Users\d\AppData\Roaming\BlueJay\FJ\profiles\BlueJay-FJ-Profile-Better-Hills.bjdata
+Date=20250817_145339
+Type=Profile
+
+[Tuning]
+;0-6000
+H Gear - Forward Maximum Speed=6000
+
+;0-6000
+H Gear - Partition 1 Speed=858
+
+;0-6000
+H Gear - Partition 2 Speed=1715
+
+;0-6000
+H Gear - Partition 3 Speed=2572
+
+;0-6000
+H Gear - Partition 4 Speed=3429
+
+;0-6000
+H Gear - Partition 5 Speed=4286
+
+;0-6000
+H Gear - Partition 6 Speed=5143
+
+;0-6000
+H Gear - Partition 7 Speed=6000
+
+;0-6000
+L Gear - Forward Maximum Speed=2500
+
+;0-6000
+H Gear - Reverse Maximum Speed=1200
+
+;0-6000
+L Gear - Reverse Maximum Speed=1000
+
+;100-2000
+H Gear - Acceleration at Partition 1=1350
+
+;100-2000
+H Gear - Acceleration at Partition 2=1300
+
+;100-2000
+H Gear - Acceleration at Partition 3=1300
+
+;100-2000
+H Gear - Acceleration at Partition 4=1250
+
+;100-2000
+H Gear - Acceleration at Partition 5=1250
+
+;100-2000
+H Gear - Acceleration at Partition 6=1300
+
+;100-2000
+H Gear - Acceleration at Partition 7=1300
+
+;100-2000
+L Gear - Acceleration at Partition 1=150
+
+;100-2000
+L Gear - Acceleration at Partition 2=300
+
+;100-2000
+L Gear - Acceleration at Partition 3=400
+
+;100-2000
+L Gear - Acceleration at Partition 4=400
+
+;100-2000
+L Gear - Acceleration at Partition 5=400
+
+;100-2000
+L Gear - Acceleration at Partition 6=300
+
+;100-2000
+L Gear - Acceleration at Partition 7=300
+
+;100-2000
+H Gear - Reverse Maximum Acceleration=300
+
+;10-100
+Driving Torque Factor 0 RPM->Partition 1=100
+
+;10-100
+Driving Torque Factor Partition 1->2=95
+
+;10-100
+Driving Torque Factor Partition 2->3=85
+
+;10-100
+Driving Torque Factor Partition 3->4=65
+
+;10-100
+Driving Torque Factor Partition 4->5=50
+
+;10-100
+Driving Torque Factor Partition 5->6=45
+
+;10-100
+Driving Torque Factor Partition 6->7=40
+
+;10-100
+Driving Torque Factor Partition 7+=35
+
+;100-2000
+H Gear - Deceleration at ~0 RPM=100
+
+;100-2000
+H Gear - Deceleration Partition 1->~0 RPM=300
+
+;100-2000
+H Gear - Deceleration Partition 2->1=350
+
+;100-2000
+H Gear - Deceleration Partition 3->2=350
+
+;100-2000
+H Gear - Deceleration Partition 4->3=500
+
+;100-2000
+H Gear - Deceleration Partition 5->4=500
+
+;100-2000
+H Gear - Deceleration Partition 6->5=500
+
+;100-2000
+H Gear - Deceleration Partition 7->6=300
+
+;0-100
+Regen Torque Factor 500->0 RPM=100
+
+;0-100
+Regen Torque Factor 1000->500 RPM=100
+
+;0-100
+Regen Torque Factor 1500->1000 RPM=65
+
+;0-100
+Regen Torque Factor 2000->1500 RPM=60
+
+;0-100
+Regen Torque Factor 2500->2000 RPM=48
+
+;0-100
+Regen Torque Factor 3000->2500 RPM=45
+
+;0-100
+Regen Torque Factor 3500->3000 RPM=25
+
+;0-100
+Regen Torque Factor 4000->3500 RPM=20
+
+;0-100
+Regen Torque Factor 4500->4000 RPM=15
+
+;0-100
+Regen Torque Factor 5000->4500 RPM=10
+
+;0-100
+Regen Torque Factor Max->5000 RPM=5
+
+;0-1000
+Maximum Motor Speed of Slope Mode=400
+
+;1-32000
+Speed Loop Ki in UnSlope Mode=200
+

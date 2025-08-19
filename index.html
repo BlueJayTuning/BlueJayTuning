@@ -60,6 +60,59 @@
             </ul>
         </section>
 
+        <section id="testimonials" class="bj-testimonials" aria-labelledby="bj-testimonials-title">
+            <h2 id="bj-testimonials-title">What users say</h2>
+
+            <div class="bj-rotator" data-interval="5500" data-pause-on-hover="true">
+                <figure class="bj-titem is-active">
+                    <blockquote>
+                        “Very easy to use. Very simple to edit. Got my cart to <strong>33 MPH at 6000 RPM</strong> with just a few clicks.”
+                    </blockquote>
+                    <figcaption>
+                        <span class="bj-name">FJ Bob</span>
+                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="bj-titem">
+                    <blockquote>
+                        “Smooth acceleration and regen made a <strong>night and day difference</strong>.”
+                    </blockquote>
+                    <figcaption>
+                        <span class="bj-name">Sam G.</span>
+                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="bj-titem">
+                    <blockquote>
+                        “The User docs <strong>make tuning understandable</strong>, thanks!”
+                    </blockquote>
+                    <figcaption>
+                        <span class="bj-name">Sally</span>
+                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
+                    </figcaption>
+                </figure>
+
+                <!-- dots populated by JS -->
+                <nav class="bj-dots" aria-label="Testimonial navigation"></nav>
+
+                <!-- Optional: controls (keyboard/assistive tech friendly) -->
+                <div class="bj-controls">
+                    <button type="button" class="bj-prev" aria-label="Previous testimonial">‹</button>
+                    <button type="button" class="bj-next" aria-label="Next testimonial">›</button>
+                </div>
+            </div>
+
+            <noscript>
+                <div class="bj-noscript">
+                    <!-- Fallback if JS is disabled -->
+                    <p><em>“Very easy to use… 33 mph at 6000 rpm.”</em> — FJ Bob</p>
+                    <p><em>“The User docs make tuning understandable”</em> — Sam G.</p>
+                </div>
+            </noscript>
+        </section>
+
         <section class="screenshot-section">
             <figure style="text-align: center;">
                 <img src="images/bluejay-fj-speed.png" alt="FJ Controller Speed Tuning Parameters"
@@ -91,10 +144,12 @@
             <ul>
                 <li><strong>Auto Detect Controller Type</strong><br>BlueJay queries the connected controller to
                     detect the exact brand/model/type</li><br>
-                <li><strong>One Application for Many Carts</strong><br>No guesswork about which sketchy tuning app to trust from an unknown site.</li>
-                    <ul>
-                        <li>Download BlueJay from the secure Microsoft Store - fully malware-scanned and Microsoft certified.</li>
-                    </ul><br>
+                <li><strong>One Application for Many Carts</strong><br>No guesswork about which sketchy tuning app to
+                    trust from an unknown site.</li>
+                <ul>
+                    <li>Download BlueJay from the secure Microsoft Store - fully malware-scanned and Microsoft
+                        certified.</li>
+                </ul><br>
                 <li><strong>Save and Restore</strong><br>Snapshot your current configuration or roll back to a
                     known-good one
                     <ul>
@@ -138,6 +193,7 @@
     </script>
 
     <script src="js/script.js"></script>
+    <script src="js/rotate.js"></script>
 </body>
 
 </html>

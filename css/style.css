@@ -661,7 +661,17 @@ figure { margin: 1.4rem auto; }
 }
 
 /* --- BlueJay Testimonials (scoped with bj- prefix) --- */
-.bj-testimonials { max-width: 980px; margin: 3rem auto; padding: 0 1rem; }
+.bj-testimonials {
+  /* THEME TOKENS (light by default) */
+  --card-bg: #fff;
+  --card-border: #eee;
+  --card-text: #111;
+  --dot: #cfd3d8;
+  --dot-active: #333;
+  --ctrl-bg: rgba(0,0,0,.05);
+
+  max-width: 980px; margin: 3rem auto; padding: 0 1rem;
+}
 .bj-testimonials h2 { margin: 0 0 1rem; font-size: clamp(1.3rem, 1.2rem + 0.5vw, 1.8rem); }
 
 .bj-rotator { position: relative; }
@@ -669,7 +679,8 @@ figure { margin: 1.4rem auto; }
   opacity: 0; transform: translateY(6px);
   transition: opacity .35s ease, transform .35s ease;
   position: absolute; inset: 0;
-  background: #fff; border: 1px solid #eee; border-radius: 14px;
+  background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 14px;
+  color: var(--card-text);
   padding: 1.25rem 1.5rem; box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 .bj-titem.is-active { opacity: 1; transform: none; position: relative; }
@@ -680,14 +691,14 @@ figure { margin: 1.4rem auto; }
 
 .bj-dots { display: flex; gap: .45rem; justify-content: center; margin-top: .8rem; }
 .bj-dots button {
-  width: .55rem; height: .55rem; border-radius: 999px; border: 0; background: #cfd3d8; cursor: pointer;
+  width: .55rem; height: .55rem; border-radius: 999px; border: 0; background: var(--dot); cursor: pointer;
 }
-.bj-dots button[aria-current="true"] { background: #333; }
+.bj-dots button[aria-current="true"] { background: var(--dot-active); }
 
 .bj-controls { position: absolute; inset: 0; pointer-events: none; }
 .bj-controls button {
   pointer-events: auto; position: absolute; top: 50%; transform: translateY(-50%);
-  border: 0; width: 2rem; height: 2rem; border-radius: 999px; background: rgba(0,0,0,.05);
+  border: 0; width: 2rem; height: 2rem; border-radius: 999px; background: var(--ctrl-bg);
   cursor: pointer; font-size: 1.1rem; line-height: 2rem;
 }
 .bj-prev { left: .5rem; }
@@ -697,8 +708,27 @@ figure { margin: 1.4rem auto; }
   .bj-titem { transition: none; }
 }
 
-/* Optional: light dark-mode polish if your site supports it */
+/* Keep LIGHT look even in dark mode */
 @media (prefers-color-scheme: dark) {
-  .bj-titem { background: #111; border-color: #222; box-shadow: none; }
-  .bj-dots button[aria-current="true"] { background: #ddd; }
+  .bj-testimonials {
+    --card-bg: #fff;
+    --card-border: #eee;
+    --card-text: #111;
+    --dot-active: #333;
+    --ctrl-bg: rgba(0,0,0,.08);
+  }
 }
+
+/* OPTIONAL: If you ever want true dark cards, just add `allow-dark` to the section
+   <section class="bj-testimonials allow-dark"> and uncomment the block below. */
+/*
+@media (prefers-color-scheme: dark) {
+  .bj-testimonials.allow-dark {
+    --card-bg: #111;
+    --card-border: #222;
+    --card-text: #e7eaf0;
+    --dot-active: #ddd;
+    --ctrl-bg: rgba(255,255,255,.08);
+  }
+}
+*/

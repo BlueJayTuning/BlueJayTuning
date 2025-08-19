@@ -641,3 +641,64 @@ figure { margin: 1.4rem auto; }
 
 .brand-list li:last-child { grid-column: span 2; }
 
+.purchase-section {
+    text-align: center;
+    margin-top: 3em;
+}
+
+#paypal-container-675KNVHH6P5S8 {
+    margin: 2em auto;
+    max-width: 400px;
+}
+
+.purchase-section input[type="text"],
+.purchase-section select {
+    display: block;
+    margin: 1em auto;
+    padding: 0.6em;
+    width: 300px;
+    font-size: 1rem;
+}
+
+/* --- BlueJay Testimonials (scoped with bj- prefix) --- */
+.bj-testimonials { max-width: 980px; margin: 3rem auto; padding: 0 1rem; }
+.bj-testimonials h2 { margin: 0 0 1rem; font-size: clamp(1.3rem, 1.2rem + 0.5vw, 1.8rem); }
+
+.bj-rotator { position: relative; }
+.bj-titem {
+  opacity: 0; transform: translateY(6px);
+  transition: opacity .35s ease, transform .35s ease;
+  position: absolute; inset: 0;
+  background: #fff; border: 1px solid #eee; border-radius: 14px;
+  padding: 1.25rem 1.5rem; box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.bj-titem.is-active { opacity: 1; transform: none; position: relative; }
+
+.bj-titem blockquote { margin: 0 0 .75rem; line-height: 1.6; font-size: 1.05rem; }
+.bj-name { font-weight: 600; }
+.bj-stars { margin-left: .5rem; letter-spacing: .15em; }
+
+.bj-dots { display: flex; gap: .45rem; justify-content: center; margin-top: .8rem; }
+.bj-dots button {
+  width: .55rem; height: .55rem; border-radius: 999px; border: 0; background: #cfd3d8; cursor: pointer;
+}
+.bj-dots button[aria-current="true"] { background: #333; }
+
+.bj-controls { position: absolute; inset: 0; pointer-events: none; }
+.bj-controls button {
+  pointer-events: auto; position: absolute; top: 50%; transform: translateY(-50%);
+  border: 0; width: 2rem; height: 2rem; border-radius: 999px; background: rgba(0,0,0,.05);
+  cursor: pointer; font-size: 1.1rem; line-height: 2rem;
+}
+.bj-prev { left: .5rem; }
+.bj-next { right: .5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bj-titem { transition: none; }
+}
+
+/* Optional: light dark-mode polish if your site supports it */
+@media (prefers-color-scheme: dark) {
+  .bj-titem { background: #111; border-color: #222; box-shadow: none; }
+  .bj-dots button[aria-current="true"] { background: #ddd; }
+}

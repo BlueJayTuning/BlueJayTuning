@@ -5,7 +5,7 @@
   const trySetMemo = () => {
     const memoEl = document.getElementById("memo");
     if (memoEl && memo) {
-      memoEl.value = memo;
+      memoEl.value = memo.toUpperCase();
       console.log("✅ Set memo field to:", memo);
       return true;
     }

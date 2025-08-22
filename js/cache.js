@@ -1,15 +1,11 @@
-const params = new URLSearchParams(location.search);
-const currentVersion = Number(params.get('v'));
+// Preserve pathname, existing params, and the hash fragment
+const url = new URL(location.href);
+
+const currentVersion = Number(url.searchParams.get('v'));
 const now = Date.now();
 
-// Only update if no version or version is older than 10s
+// Only update if no version or older than 10s
 if (!currentVersion || now - currentVersion > 10000) {
-  // Set or update the 'v' param
-  params.set('v', now);
-
-  // Rebuild path with preserved parameters
-  const cleanPath = location.pathname;
-  const newUrl = cleanPath + '?' + params.toString();
-
-  location.replace(newUrl);
+  url.searchParams.set('v', String(now));
+  location.replace(url.toString()); // keeps the #issues (or any hash)
 }

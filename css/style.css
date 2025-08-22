@@ -139,6 +139,7 @@ i.fa-solid {
   font-size: 2.5rem;
   cursor: pointer;
   color: #007BFF;
+  margin-left: 8px;   /* small gap to the right */
 }
 
 .nav-menu {
@@ -181,8 +182,7 @@ i.fa-solid {
   gap: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  min-height: 64px;
-  /* ensures room for header */
+  padding-left: 50px;  /* reserve space for hamburger */
 }
 
 .header-text {
@@ -304,9 +304,9 @@ figure figcaption {
   }
 }
 
-/* ===== Pricing ===== */
-.pricing {
-  margin: 60px auto;
+.pricing { 
+  margin: 44px auto;
+  margin-top: 0px;
   padding: 0 10px;
   max-width: 960px;
   text-align: center;
@@ -613,8 +613,6 @@ main { max-width: 900px; }   /* a bit wider to reduce vertical flow */
 figure { margin: 1.4rem auto; }
 .cta-banner { margin-top: 36px; padding: 28px 18px; }
 
-/* ===== E. Pricing minor tighten (keeps your current look) ===== */
-.pricing { margin: 44px auto; }
 .plan-card { padding: 16px; }
 .plan-features { margin: 10px 0 14px; }
 .plan-features li { margin: 6px 0; }

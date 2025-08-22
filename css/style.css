@@ -730,3 +730,24 @@ figure { margin: 1.4rem auto; }
   }
 }
 */
+
+/* make sure the section is a positioning context */
+.coming-soon {
+  position: relative;
+  overflow: hidden; /* keeps watermark within this section */
+}
+
+/* diagonal overlay text */
+.coming-soon::after {
+  content: "COMING SOON";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+  font: 900 clamp(24px, 6vw, 72px)/1.2 system-ui, sans-serif;
+  color: rgba(220, 0, 0, 0.25);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  pointer-events: none; /* clicks still disabled underneath */
+  z-index: 2;
+}

@@ -2,7 +2,7 @@
 ; Changes will prevent loading and you will lose ability to recover.
 
 [BlueJay]
-Version=BlueJay  :  v20250814
+Version=BlueJay  :  v20250822
 Contact=support@bluejaytuning.com
 
 [Customer]
@@ -10,8 +10,8 @@ Name=
 
 [FILE]
 ControllerType=EV48-400-C
-Name=C:\Users\d\AppData\Roaming\BlueJay\EV48-400-C\backups\BlueJay-EV48-400-C-D2-Backup-4kW-with-EMbrake-20230524.bjdata
-Date=20250814_174230
+Name=BlueJay-EV48-400-C-D2-Backup-4kW-with-EMbrake-20230524.bjdata
+Date=20250822
 Type=Backup
 
 [Controller]
@@ -44,9 +44,9 @@ Odometer=778
 Cycles=0
 
 [Firmware]
-Release Date=2023/05/24
-Version=v1
-Type=Electric brakes 4kW
+Release Date=2023/05/24
+Version=v1
+Type=Electric brakes 4kW
 
 [Faults]
 EMBrakeOpen ControllerSevereUndertemp UKSISupplyOutOfRange MainContactorDidNotClose 

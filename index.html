@@ -1,199 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <script src="js/cache.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Motor controller tuning for golf carts and utility vehicles using BlueJay tuning software. Compatible with EV48‑400‑C, FJ, Tercel/LVTong/JHL, and more.">
-    <title>BlueJay Tuning | Motor Controller Tuning for Golf Carts</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>BlueJay Beta Update</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f4c75, #3282b8);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 3rem;
+      border-radius: 16px;
+      max-width: 650px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ffd369;
+    }
+    p {
+      line-height: 1.6;
+      margin: 0.75rem 0;
+      font-size: 1.1rem;
+    }
+    .highlight {
+      font-weight: 600;
+      color: #fff;
+    }
+  </style>
 </head>
-
 <body>
-    <div id="header"></div>
-
-    <main id="content">
-
-        <section class="hero">
-            <div class="hero-content">
-                <h1>DIY Golf & Utility Cart Performance Tuning</h1>
-                <p class="subhead">
-                    BlueJay makes tuning easy - even for beginners!
-                </p>
-                <p class="subhead">
-                    Auto detects your controller type<br>Save and restore parameters<br>Load/create/share tuning
-                    profiles
-                </p>
-                <a href="downloads.html" class="button-primary">Download Now</a>
-                <p class="secondary-link"><a href="faqs.html">Need help? Visit FAQs</a></p>
-            </div>
-        </section>
-
-        <section>
-            BlueJay works with a wide range of carts with compatible AC motor controllers
-            <ul class="brand-list">
-                <li>Advanced EV</li>
-                <li>Bintelli</li>
-                <li>Coleman</li>
-                <li>Denago</li>
-                <li>Evolution / HDK</li>
-                <li>ExCar</li>
-                <li>EZKruiser</li>
-                <li>Gotraxx</li>
-                <li>Gorilla</li>
-                <li>Icon</li>
-                <li>Legend</li>
-                <li>Moto Electric</li>
-                <li>PDG</li>
-                <li>Pure EV</li>
-                <li>Racka</li>
-                <li>Royal</li>
-                <li>Spartan</li>
-                <li>Star</li>
-                <li>Spark</li>
-                <li>Tao</li>
-                <li>Whisper</li>
-                <li>Many others with FJ, EV48-400-C and Tercel/LVTong controllers</li>
-            </ul>
-        </section>
-
-        <section id="testimonials" class="bj-testimonials" aria-labelledby="bj-testimonials-title">
-            <h2 id="bj-testimonials-title">What users say</h2>
-
-            <div class="bj-rotator" data-interval="5500" data-pause-on-hover="true">
-                <figure class="bj-titem is-active">
-                    <blockquote>
-                        “Very easy to use. Very simple to edit. Got my cart to <strong>33 MPH at 6000 RPM</strong> with just a few clicks.”
-                    </blockquote>
-                    <figcaption>
-                        <span class="bj-name">FJ Greg</span>
-                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="bj-titem">
-                    <blockquote>
-                        “Smooth acceleration and regen made a <strong>night and day difference</strong>.”
-                    </blockquote>
-                    <figcaption>
-                        <span class="bj-name">Tercel Sam</span>
-                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
-                    </figcaption>
-                </figure>
-
-                <figure class="bj-titem">
-                    <blockquote>
-                        “Simple interface and great user docs <strong>makes tuning understandable</strong>, thanks!”
-                    </blockquote>
-                    <figcaption>
-                        <span class="bj-name">400-C Sally</span>
-                        <span class="bj-stars" aria-label="5 out of 5">★★★★★</span>
-                    </figcaption>
-                </figure>
-
-                <!-- dots populated by JS -->
-                <nav class="bj-dots" aria-label="Testimonial navigation"></nav>
-
-                <!-- Optional: controls (keyboard/assistive tech friendly) -->
-                <div class="bj-controls">
-                    <button type="button" class="bj-prev" aria-label="Previous testimonial">‹</button>
-                    <button type="button" class="bj-next" aria-label="Next testimonial">›</button>
-                </div>
-            </div>
-
-            <noscript>
-                <div class="bj-noscript">
-                    <!-- Fallback if JS is disabled -->
-                    <p><em>“Very easy to use… 33 mph at 6000 rpm.”</em> - FJ Bob</p>
-                    <p><em>“…makes tuning understandable”</em> - 400-C Sally</p>
-                </div>
-            </noscript>
-        </section>
-
-        <section class="screenshot-section">
-            <figure style="text-align: center;">
-                <img src="images/bluejay-fj-speed.png" alt="FJ Controller Speed Tuning Parameters"
-                    class="img-ui-preview" />
-                <figcaption>
-                    FJ Controller Speed Tuning Parameters
-                </figcaption>
-            </figure>
-
-            <figure style="text-align: center;">
-                <img src="images/bluejay-400-c-speed.png" alt="EV48-400-C Controller Speed Tuning Parameters"
-                    class="img-ui-preview" />
-                <figcaption>
-                    EV48-400-C Controller Speed Tuning Parameters
-                </figcaption>
-            </figure>
-
-            <figure style="text-align: center;">
-                <img src="images/bluejay-tercel-speed.png" alt="Tercel/LVTong Controller Speed Tuning Parameters"
-                    class="img-ui-preview" />
-                <figcaption>
-                    Tercel/LVTong Controller Speed Tuning Parameters
-                </figcaption>
-            </figure>
-
-        </section>
-
-        <section>
-            <ul>
-                <li><strong>Auto Detect Controller Type</strong><br>BlueJay queries the connected controller to
-                    detect the exact brand/model/type</li><br>
-                <li><strong>One Application for Many Carts</strong><br>No guesswork about which sketchy tuning app to
-                    trust from an unknown site.</li>
-                <ul>
-                    <li>Download BlueJay from the secure Microsoft Store - fully malware-scanned and Microsoft
-                        certified.</li>
-                </ul><br>
-                <li><strong>Save and Restore</strong><br>Snapshot your current configuration or roll back to a
-                    known-good one
-                    <ul>
-                        <li>Restore factory parameter settings!</li>
-                        <li>Save before you change and have a safe rollback point!</li>
-                    </ul>
-                </li>
-                <br>
-                <li><strong>English interface</strong><br>Simple and clear parameter descriptions</li><br>
-                <li><strong>Tuning profiles</strong><br>Load performance profiles or create and share your own!
-                    <ul>
-                        <li>Fast and Sporty</li>
-                        <li>Casual Around Town</li>
-                        <li>Better Hills</li>
-                        <li>Many others shared by the community!</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section class="cta-banner">
-            <div class="cta-content">
-                <a href="downloads.html" class="button-primary">Download Now</a>
-                <p class="secondary-link"><a href="faqs.html">Need help? Visit FAQs</a></p>
-            </div>
-        </section>
-
-    </main>
-
-    <div id="footer"></div>
-
-    <script>
-        async function loadHTML(id, file) {
-            const res = await fetch(file);
-            const html = await res.text();
-            document.getElementById(id).innerHTML = html;
-        }
-
-        loadHTML('header', '/includes/header.html');
-        loadHTML('footer', '/includes/footer.html');
-    </script>
-
-    <script src="js/script.js"></script>
-    <script src="js/rotate.js"></script>
+  <div class="container">
+    <h1>BlueJay Beta Program Update</h1>
+    <p>The <span class="highlight">BlueJay Beta testing program</span> has now come to a close.</p>
+    <p>Our team is taking a pause while we evaluate the results and determine the next phase of development.</p>
+    <p>We thank everyone who showed interest in joining, and extend our gratitude to our many beta testers for their time, feedback, and dedication.</p>
+  </div>
 </body>
-
 </html>
